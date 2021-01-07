@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  AR Ruler
-//
-//  Created by Angela Yu on 31/07/2017.
-//  Copyright © 2017 Angela Yu. All rights reserved.
-//
 
 import UIKit
 import SceneKit
@@ -20,7 +13,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
         sceneView.delegate = self
         
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
@@ -30,17 +22,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        
-        // Run the view's session
+
         sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
+
         sceneView.session.pause()
     }
     
